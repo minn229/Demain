@@ -1,0 +1,504 @@
+
+/* body{
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-width:1450px;
+} */
+*{
+    margin: 0;
+    padding: 0;
+    cursor: url(../image/cursor.png), auto;
+}
+ul {
+    list-style: none;
+}
+a:hover{
+    cursor: url(../image/cursor_click.png), auto;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Header _ Start */
+
+/* 고정 헤더 */
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 98;
+}
+
+.hd_content_wrap {
+    margin: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0 50px;
+    box-sizing: border-box;
+    z-index: 99;
+}
+.head_logo a {
+    width: 140px;
+    height: 65px;
+    background-position: center;
+    display: block;
+    background-image: url(../image/hd_logo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    align-self: center;
+}
+
+.head_link {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.head_link li a {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-size: 86%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.head_link li:nth-child(2) a {
+    margin: 0 25px;
+}
+
+.search a {
+    background-image: url(../image/search.png);
+}
+
+.cart a {
+    background-image: url(../image/cart.png);
+}
+/* 햄버거메뉴 */
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+.menu-trigger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 3px;
+    background-color: #4b565e;
+    border-radius: 10px;
+  }
+  
+  .menu-trigger span:nth-of-type(1) {
+    top: 3px;
+  }
+  
+  .menu-trigger span:nth-of-type(2) {
+    top: 11px;
+  }
+  
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 3px;
+  }
+  
+  /* 2th bar 사라지고,  1st 3rd bar 회전하며 X  */
+  
+  .menu-trigger.active-1 span:nth-of-type(1) {
+    transform: translateY(8px) rotate(-45deg);
+    width: 24px;
+  }
+  
+  .menu-trigger.active-1 span:nth-of-type(2) {
+    opacity: 0;
+  }
+  
+  .menu-trigger.active-1 span:nth-of-type(3) {
+    transform: translateY(-8px) rotate(45deg);
+    width: 24px;
+  }
+
+/* Sidebar_S */
+.sidebar {
+    width: 340px;
+    height: 100vh;
+    background-color: rgba(199, 214, 225, 0.6);
+    backdrop-filter: blur(10px);
+    position: fixed ;
+    top: 0; 
+    right: -340px;
+    box-sizing: border-box;
+    padding-top: 200px;
+    padding-right: 30px;
+    text-align: right;
+    border-radius: 30px 0 0 30px;
+    transition: 0.7s;
+    z-index: 90;
+
+}
+
+.sidebar.active {
+    right: 0;
+}
+.gnb{
+    display: block;
+}
+.sidemenu{
+    display: block;
+}
+.sidemenu a{
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 550;
+    color: #43505a;
+    letter-spacing: 1px;
+    display: block;
+    position: relative;
+}
+.sidemenu a.on{
+    color: #fff;
+}
+.gnb>li {
+    margin-bottom: 30px;
+}
+
+.gnb>li>a:hover {
+ 
+   color: #fff;
+}
+.submenu{
+    display: none;
+    padding-top: 13px;
+}
+.submenu a{
+    display: block;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 550;
+    color: #556570;
+    padding-bottom: 13px;
+}
+.submenu a:hover{
+    color: #8098b0;
+}
+/* Sidebar_E */
+
+/* full page */
+#fullpage{
+    font-family: "Pretendard Variable", sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    color: #43505a;
+    line-height: 36px;
+}
+/* 1번 페이지 */
+.video video{
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+
+}
+/* 2번 페이지 */
+.wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.naming{
+    width: 100%;
+    height: 100%;
+    background: url(../image/about_us/about_1.png) no-repeat 100%;
+    background-size: cover;
+}
+.naming .section-wrap{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.slogan{
+    font-family: "Libre Baskerville", serif;
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 50px;
+    color: #43505a;
+    padding-bottom: 30px;
+}
+
+/* 3번 페이지 */
+.value{
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/about_us/about_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.value .section-wrap{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 200px;
+}
+.sustainable{
+    font-family: "Libre Baskerville", serif;
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 50px;
+    color: #fafafa;
+    padding-bottom: 30px;
+
+}
+/* 메인 컨텐츠 */
+/* .section{
+    position: relative;
+} */
+.contents-box{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+.contents_wrap{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: row;
+}
+
+.img_wrap{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.txt_wrap{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+.contents_sub-tit{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #617683;
+}
+.contents_txt{
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 38px;
+    letter-spacing: -1px;
+}
+
+
+/* 4번 페이지 */
+.img1{
+    background: url(../image/about_us/about_3.png) no-repeat;
+    background-size: cover;
+}
+.promise .txt_wrap{
+    background-color: #fafafa;
+}
+.eco_mark img:nth-of-type(1), .eco_mark img:nth-of-type(2), .eco_mark img:nth-of-type(3){
+    margin-right: 30px;
+}
+.eco_mark{
+    margin-top: 30px;
+}
+
+
+/* 5번째 페이지 */
+.ingredient .img_wrap{
+    animation-name: backchange;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function : ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    z-index: 99;
+}
+@keyframes backchange{
+    0%{
+        background-image: url(../image/about_us/about_4-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    100%{
+        background-image: url(../image/about_us/about_4-2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.ingredient{
+    background-color: #f1f1f1;
+}
+/* 6번째 페이지 */
+.campaign{
+    background-color: #ffffff;
+}
+.campaign .img_wrap{
+    animation-name: backchange2;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function : ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+
+}
+@keyframes backchange2{
+    0%{
+        background-image: url(../image/about_us/about_5-1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    50%{
+        background-image: url(../image/about_us/about_5-2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    100%{
+        background-image: url(../image/about_us/about_5-3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.bt_campaign{
+    display: inline-block;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 650;
+    letter-spacing: 0;
+    border-radius: 40px;
+    margin-top: 30px;
+    border: none;
+    overflow: hidden;
+    padding: 20px;
+    width: 500px;
+    align-self: center;
+    background: #d7e3eb;
+}
+.bt_campaign span{
+    display: inline-block;
+}
+.bt_campaign:hover span{
+    transform: translateX(20%);
+    transition: all 1.5s;
+}
+.bt_campaign:hover{
+    background: #d7e3eb66;
+}
+.bt_campaign span::before{
+    content: url(../image/about_us/arrow.png);
+    padding-right: 20px;
+}
+
+
+/* Footer_ Strart */
+.footer {
+    background-color: #cfdce8;
+    height: 360px;
+    margin-top: 150px;
+}
+
+.foot-wrap {
+    width: 1320px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.foot_logo {
+    width: 660px;
+    height: 360px;
+    background-image: url(../image/ft_logo.png);
+    background-position: center 75px;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+.foot-link {
+    width: 660px;
+    height: 360px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 80px 50px;
+    font-family: Montserrat;
+    color: #43505a;
+}
+
+.ft-tit {
+    font-size: 18px;
+    font-weight: 640;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.ft-sub li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.ft-sub li:hover{
+    text-decoration: underline;
+}
+.copyright-wrap {
+    background-color: #fff;
+    height: 60px;
+    border-top: 1px solid #505050;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    color: #505050;
+}
+
+/* Footer_ End */
