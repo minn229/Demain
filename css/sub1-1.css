@@ -336,6 +336,7 @@ a {
 .img1{
     background: url(../image/about_us/about_3.png) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .promise .txt_wrap{
     background-color: #fafafa;
@@ -364,11 +365,13 @@ a {
         background-image: url(../image/about_us/about_4-1.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
     100%{
         background-image: url(../image/about_us/about_4-2.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
 }
 .ingredient{
@@ -393,16 +396,19 @@ a {
         background-image: url(../image/about_us/about_5-1.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
     50%{
         background-image: url(../image/about_us/about_5-2.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
     100%{
         background-image: url(../image/about_us/about_5-3.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
 }
 .bt_campaign{
